@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Tamu</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-text">
+          <h2 class="site-title">Buku Tamu Kondangan</h2>
+          <p class="tagline">Sistem Pencatatan Tamu Kondangan</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="site-content">
+      <section class="form-section">
+        <h2>Isi Buku Tamu Kondangan</h2>
+        <form id="form-tamu" novalidate>
+          <input type="hidden" id="tamu-id" value="" />
+
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required />
+          </div>
+
+          <div class="form-group">
+            <label for="notelpon">No Telpon</label>
+            <input type="text" id="notelpon" name="notelpon" required />
+          </div>
+
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <input type="text" id="pesan" name="pesan" row="4" required />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="btn-submit">Kirim</button>
+            <button type="button" id="btn-batal" class="btn-secondary" hidden>
+              Batal
+            </button>
+          </div>
+
+          <p id="form-status" class="status-msg" role="status"></p>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <h2>Daftar Tamu Kondangan (<span id="jumlah-tamu">0</span>)</h2>
+
+        <div id="tabel-wrapper">
+          <table id="tabel-tamu">
+            <thead>
+              <tr>
+                <th>Tamu</th>
+                <th>Pesan</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        &copy; <span id="tahun">2026.</span>Buku Tamu Kondangan. Hak Cipta
+        dilindungi
+      </p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
